@@ -1,0 +1,10 @@
+crops:
+  - block: minecraft:wheat
+    seed: minecraft:wheat_seeds
+  - block: minecraft:potatoes
+    seed: minecraft:potato
+  - block: minecraft:carrots
+    seed: minecraft:carrot
+
+hoes:
+  [minecraft:wooden_hoe,minecraft:stone_hoe,minecraft:golden_hoe,minecraft:iron_hoe,minecraft:diamond_hoe,minecraft:netherite_hoe]

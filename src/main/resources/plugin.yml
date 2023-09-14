@@ -1,0 +1,17 @@
+name: BetterReap
+version: '1.919810'
+main: com.wsx.betterreap.BetterReap
+api-version: '1.19'
+authors: [wsx]
+description: Use right click to reap plants and auto replant when hoe on hand.
+
+commands:
+  betterreap:
+    description: timefreeze command.
+    usage: /<command>
+    permission: btr.op
+    permission-message: You don't have <permission>
+
+permissions:
+  btr.op:
+    default: op

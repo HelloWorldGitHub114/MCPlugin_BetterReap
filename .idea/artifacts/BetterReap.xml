@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BetterReap">
+    <output-path>$PROJECT_DIR$/out/artifacts/BetterReap</output-path>
+    <root id="archive" name="BetterReap.jar">
+      <element id="module-output" name="BetterReap.main" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/config.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+    </root>
+  </artifact>
+</component>
