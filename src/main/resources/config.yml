@@ -1,3 +1,4 @@
+#在这里添加农作物的方块id和种子id
 crops:
   - block: minecraft:wheat
     seed: minecraft:wheat_seeds
@@ -5,6 +6,13 @@ crops:
     seed: minecraft:potato
   - block: minecraft:carrots
     seed: minecraft:carrot
+  - block: minecraft:beetroots
+    seed: minecraft:beetroot_seeds
+  - block: minecraft:nether_wart
+    seed: minecraft:nether_wart
+  - block: minecraft:cocoa
+    seed: minecraft:cocoa_beans
 
+#在这里定义手拿什么物品时右键触发
 hoes:
   [minecraft:wooden_hoe,minecraft:stone_hoe,minecraft:golden_hoe,minecraft:iron_hoe,minecraft:diamond_hoe,minecraft:netherite_hoe]
