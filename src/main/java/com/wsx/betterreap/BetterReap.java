@@ -37,7 +37,7 @@ public class BetterReap extends JavaPlugin implements Listener {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(args.length==1&&args[0].equals("reload")){
             loadConfigValues();
-            this.getLogger().info(ChatColor.GREEN+"BetterReap reload.");
+            sender.sendMessage(ChatColor.GREEN+"BetterReap reload.");
         }else{
             sender.sendMessage(ChatColor.DARK_RED+"wrong command.");
         }
@@ -110,16 +110,16 @@ public class BetterReap extends JavaPlugin implements Listener {
                                 String cropSeed = cropsMap.get(BlockName);
                                 //没找到的标志
                                 boolean flag = true;
-                                //遍历查找背包内种子
+                                //遍历查找背包内种子,注意这里物品可能为null导致bug
                                 for (ItemStack item: event.getPlayer().getInventory()
                                      ) {
-                                        if(cropSeed.equals(item.getType().getKey().toString())){
-                                            //找到了，成功消耗种子
-                                            item.setAmount(item.getAmount()-1);
-                                            clickedBlock.setBlockData(getServer().createBlockData(blockDataBuffer));
-                                            flag = false;
-                                            break;
-                                        }
+                                    if (item != null && cropSeed.equals(item.getType().getKey().toString())) {
+                                        //找到了，成功消耗种子
+                                        item.setAmount(item.getAmount() - 1);
+                                        clickedBlock.setBlockData(getServer().createBlockData(blockDataBuffer));
+                                        flag = false;
+                                        break;
+                                    }
                                 }
                                 //没找到
                                 if(flag) event.getPlayer().sendMessage(ChatColor.RED+cropSeed+" not found.");
