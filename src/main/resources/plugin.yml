@@ -1,5 +1,5 @@
 name: BetterReap
-version: '1.919810'
+version: '2.1919810'
 main: com.wsx.betterreap.BetterReap
 api-version: '1.19'
 authors: [wsx]
@@ -15,3 +15,5 @@ commands:
 permissions:
   btr.op:
     default: op
+  btr.normal:
+    default: true
