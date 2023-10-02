@@ -16,21 +16,3 @@ crops:
 #在这里定义手拿什么物品时右键触发
 hoes:
   [minecraft:wooden_hoe,minecraft:stone_hoe,minecraft:golden_hoe,minecraft:iron_hoe,minecraft:diamond_hoe,minecraft:netherite_hoe]
-
-#设置拥有什么权限的玩家能用插件效果，默认全部玩家。你也可以写成btr.op，表示管理员才有权限，或者设置成其它的权限。不过注意，管理员（op）其实没有权限也能用连锁效果。
-permission: btr.normal
-#设置是否启用lore识别
-useLore: false
-#设置什么lore可以触发连锁效果(实际物品的lore后要加上 :连锁的数量 ，例如 chainReapNum:64)。必须要useLore为true才有用。
-#指令示例 /give @s minecraft:diamond_hoe{display:{Lore:["{\"text\":\"chainReapNum:10\",\"color\":\"aqua\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}"]}}
-chainLore: chainReapNum
-#定义默认连锁数量。如果没有启用需要lore触发，那么就会使用这个默认连锁数量。连锁计数不区分是否成熟。如果你想要只有有lore的物品才触发，你可以把这一项设置为1。
-defaultChainNum: 64
-#定义最大连锁数量。限制lore值可以设置的最大连锁数量。注意这个值不影响defaultChainNum，也就是说其可以超过这个值。
-maxChainNum: 64
-#定义骨粉连锁的范围。注意连锁计数的时候不论是否成熟都计入，但是只有不成熟的会消耗骨粉。
-boneMealChainNum: 64
-#定义连锁的算法,0表示bfs，1表示dfs。影响连锁方块的顺序。
-algorithm: 0
-#定义在什么世界不生效，默认所有世界都生效
-worldBlackList: []
